@@ -1,11 +1,12 @@
 package httpServer
 
 import (
+    "strconv"
 	"fmt"
 	"net/http"
 )
 
-func HttpServer() {
+func HttpServer(port string) {
 	http.HandleFunc("/", func (w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "Welcome to my website!")
 	})
@@ -13,5 +14,7 @@ func HttpServer() {
 	fs := http.FileServer(http.Dir("static/"))
 	http.Handle("/static/", http.StripPrefix("/static/", fs))
 
-	http.ListenAndServe(":80", nil)
+	http.ListenAndServe(":" + port, nil)
+
+	fmt.Println("http server is running at http://localhost:" + port)
 }
