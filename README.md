@@ -9,9 +9,10 @@
 ### 環境安裝
 以下將以Windows環境為例。下載安裝包後，進行安裝，不用特別設定。
 
-* 步驟一 - 下載[安裝包](https://golang.org/dl/)
+* 步驟一 - 下載[安裝包](https://golang.org/dl/) <br>
+![alt text](/img/install/go0.PNG)<br>
 
-* 步驟二 - 按照![alt text](https://oranwind.s3.amazonaws.com/2016/Mar/go4-1458116526904.PNG)
+* 步驟二 - 按照![alt text](/img/install/go1.PNG)
 
 ```
 Give examples
