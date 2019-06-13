@@ -12,3 +12,5 @@
 ```
 httpserver.HttpServer("8080")
 ```
+
+你可以直接在```main.go```的div下新增並使用```static```。
