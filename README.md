@@ -33,7 +33,7 @@
 ![](/img/install/go6.png)
 
 
-### 安裝套件
+### 安裝套件&更新
 
 以下將介紹如何下載此套件。
 
@@ -42,6 +42,12 @@ go get github.com/PietaTony/APILib
 ```
 
 即可下載成功。
+
+更新基本上跟下載一樣，只需多加個```-u```即可。
+
+```
+go get -u github.com/PietaTony/APILib
+```
 
 ## 運行測試
 
