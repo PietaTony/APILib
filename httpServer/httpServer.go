@@ -13,7 +13,6 @@ func HttpServer(port string) {
 	fs := http.FileServer(http.Dir("static/"))
 	http.Handle("/static/", http.StripPrefix("/static/", fs))
 
-	http.ListenAndServe(":" + port, nil)
-
 	fmt.Println("http server is running at http://localhost:" + port)
+	http.ListenAndServe(":" + port, nil)
 }

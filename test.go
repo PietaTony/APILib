@@ -1,7 +1,7 @@
 package main
 
-import "github.com/PietaTony/APILib/helloworld"
+import . "github.com/PietaTony/APILib/httpServer"
 
 func main(){
-	helloWorld.HelloWorld()
+	HttpServer("8080")
 }
