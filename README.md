@@ -10,9 +10,9 @@
 以下將以Windows環境為例。下載安裝包後，進行安裝，不用特別設定。
 
 * 步驟一 - 下載[安裝包](https://golang.org/dl/) <br>
-![alt text](/img/install/go0.PNG)<br>
+![](/img/install/go0.png)<br>
 
-* 步驟二 - 按照![alt text](/img/install/go1.PNG)
+* 步驟二 - 按照![](/img/install/go1.png)
 
 ```
 Give examples
