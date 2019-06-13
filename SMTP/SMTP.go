@@ -1,4 +1,4 @@
-package SMTPServer
+package SMTP
 
 import (
     "fmt"
@@ -9,15 +9,13 @@ import (
     "crypto/tls"
 )
 
-// SSL/TLS Email Example
-
-func SMTPSend( fromMail string,
-               toMail string,
-               subj string,
-               body string,
-               SMTPName string,
-               SMTPMail string,
-               SMTPPassword string ) {
+func Send( fromMail string,
+           toMail string,
+           subj string,
+           body string,
+           SMTPServer string,
+           SMTPMail string,
+           SMTPPassword string ) (bool) {
 
     from := mail.Address{"", fromMail}
     to   := mail.Address{"", toMail}
@@ -38,9 +36,9 @@ func SMTPSend( fromMail string,
     message += "\r\n" + body
 
     // Connect to the SMTP Server
-    //SMTPName := "smtp.gmail.com:465"
+    //SMTPServer := "smtp.gmail.com:465"
 
-    host, _, _ := net.SplitHostPort(SMTPName)
+    host, _, _ := net.SplitHostPort(SMTPServer)
 
     auth := smtp.PlainAuth("", SMTPMail, SMTPPassword, host)
 
@@ -53,46 +51,55 @@ func SMTPSend( fromMail string,
     // Here is the key, you need to call tls.Dial instead of smtp.Dial
     // for smtp servers running on 465 that require an ssl connection
     // from the very beginning (no starttls)
-    conn, err := tls.Dial("tcp", SMTPName, tlsconfig)
+    conn, err := tls.Dial("tcp", SMTPServer, tlsconfig)
     if err != nil {
         log.Panic(err)
+        return false
     }
 
     c, err := smtp.NewClient(conn, host)
     if err != nil {
         log.Panic(err)
+        return false
     }
 
     // Auth
     if err = c.Auth(auth); err != nil {
         log.Panic(err)
+        return false
     }
 
     // To && From
     if err = c.Mail(from.Address); err != nil {
         log.Panic(err)
+        return false
     }
 
     if err = c.Rcpt(to.Address); err != nil {
         log.Panic(err)
+        return false
     }
 
     // Data
     w, err := c.Data()
     if err != nil {
         log.Panic(err)
+        return false
     }
 
     _, err = w.Write([]byte(message))
     if err != nil {
         log.Panic(err)
+        return false
     }
 
     err = w.Close()
     if err != nil {
         log.Panic(err)
+        return false
     }
 
     c.Quit()
     fmt.Println("SMTP Send Success")
+    return true
 }

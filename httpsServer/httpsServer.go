@@ -14,6 +14,6 @@ func HttpsServer(port string) {
     http.HandleFunc("/", handler)
 
     fmt.Println("https://localhost:" + port)
-    http.ListenAndServeTLS(":" + port, "ssl/certificate.crt",
+    http.ListenAndServeTLS(":" + port, "ssl/cert.crt",
         "ssl/private.key", nil)
 }
