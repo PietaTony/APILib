@@ -17,9 +17,9 @@
 * "SMTPMail": SMTP帳號(Email string)
 * "SMTPPassword": SMTP密碼(Email password string)
 
-###GMail SMTP使用方法
+### GMail SMTP使用方法
 
-####設定 IMAP
+#### 設定 IMAP
 
 步驟 1：檢查 IMAP 是否已啟用
 
@@ -47,5 +47,5 @@
 | 帳戶名稱、使用者名稱或電子郵件地址      | 您的完整電子郵件地址     | 
 | 密碼      | 您的 Gmail 密碼     | 
 
-#資料來源
+# 資料來源
 [Google SMTP相關設定](https://support.google.com/mail/answer/7126229?hl=zh-Hant)
