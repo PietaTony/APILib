@@ -40,7 +40,7 @@ func allowCrossDomain(c *gin.Context) {
     c.Next()
 }
 
-// http://pieta.ml/v1/SMTP/send?from=sjmtony@gmail.com&to=sjmtony@gmail.com&subj=tes%20t%202%202%202&body=test1&SMTPServer=smtp.gmail.com:465&SMTPMail=sjmtony@gmail.com&SMTPPassword=Sjm778887
+// http://localhost/v1/SMTP/send?from=sjmtony@gmail.com&to=sjmtony@gmail.com&subj=tes%20t%202%202%202&body=test1&SMTPServer=smtp.gmail.com:465&SMTPMail=sjmtony@gmail.com&SMTPPassword=Sjm778887
 func SMTPSend(c *gin.Context){
 	from := c.Query("from")
 	to := c.Query("to")
@@ -49,7 +49,7 @@ func SMTPSend(c *gin.Context){
 	SMTPServer := c.Query("SMTPServer")
 	SMTPMail := c.Query("SMTPMail")
 	SMTPPassword := c.Query("SMTPPassword")
-	SMTP.Send( from, to,
+	success := SMTP.Send( from, to,
 			  subj, body,
 			  SMTPServer,
 			  SMTPMail, SMTPPassword )
@@ -61,5 +61,6 @@ func SMTPSend(c *gin.Context){
 		"SMTPServer": SMTPServer,
 		"SMTPMail": SMTPMail,
 		"SMTPPassword": SMTPPassword,
+		"success": success,
 	})
 }
