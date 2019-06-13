@@ -1,15 +1,17 @@
 # APILib
 
-這是我用GOLANG製作的一些API套件，歡迎參閱。<br>
-詳細內容可以在README.docx中查詢。<br>
+這是用golang練習時製作的一些API套件，歡迎參閱。<br>
 
 ## 入門
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+在後面的流程將依序介紹－環境安裝、套件安裝、套件使用
 
-### 必要條件
+### 環境安裝
+以下將以Windows環境為例。下載安裝包後，進行安裝，不用特別設定。
 
-What things you need to install the software and how to install them
+* 步驟一 - 下載[安裝包](https://golang.org/dl/)
+
+* 步驟二 - 按照![alt text](https://oranwind.s3.amazonaws.com/2016/Mar/go4-1458116526904.PNG)
 
 ```
 Give examples
@@ -22,7 +24,7 @@ A step by step series of examples that tell you how to get a development env run
 Say what the step will be
 
 ```
-Give the example
+go get github.com/PietaTony/APILib
 ```
 
 And repeat
