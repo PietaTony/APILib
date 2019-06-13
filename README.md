@@ -24,27 +24,15 @@
 * 步驟四 - 開啟CMD，並輸入go。若出現資訊如下圖，表示成功。<
 ![](/img/install/go6.png)<br>
 
-```
-Give examples
-```
+### 安裝套件
 
-### 安裝
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+以下將介紹如何下載此套件。
 
 ```
 go get github.com/PietaTony/APILib
 ```
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+即可下載成功。
 
 ## 運行測試
 
