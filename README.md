@@ -12,7 +12,13 @@
 * 步驟一 - 下載[安裝包](https://golang.org/dl/) <br>
 ![](/img/install/go0.png)<br>
 
-* 步驟二 - 按照![](/img/install/go1.png)
+* 步驟二 - 參考以下圖片進行安裝<br>
+![](/img/install/go1.png)<br>
+![](/img/install/go2.png)<br>
+![](/img/install/go3.png)<br>
+![](/img/install/go4.png)<br>
+![](/img/install/go5.png)<br>
+![](/img/install/go6.png)<br>
 
 ```
 Give examples
