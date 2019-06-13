@@ -45,11 +45,15 @@ go get github.com/PietaTony/APILib
 
 ## 運行測試
 
-Explain how to run the automated tests for this system
+我們可以將test.go這個檔案，複製置任意處，並且在CMD中下達以下指令來進行測試。
 
-### Break down into end to end tests
+```
+go run test.go
+```
 
-Explain what these tests test and why
+### go API
+
+可以使用go的語法同時運行多個API，但切記，要注意在使用go的語法時，主程式必須持續運行，不然可能會讓整個程式預期外的時間結束。
 
 ```
 Give an example
