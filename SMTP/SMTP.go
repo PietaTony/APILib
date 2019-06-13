@@ -9,6 +9,16 @@ import (
     "crypto/tls"
 )
 
+
+/*
+"from":寄信端(Email string)
+"to": 收信端(Email string)
+"subj": 主題(string)
+"body": 內容(string)
+"SMTPServer": SMTP的伺服器
+"SMTPMail": SMTP帳號(Email string)
+"SMTPPassword": SMTP密碼(Email password string)
+*/
 func Send( fromMail string,
            toMail string,
            subj string,

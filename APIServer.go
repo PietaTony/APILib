@@ -10,6 +10,9 @@ func main(){
     APIServer("80")
 }
 
+/*
+API Server 運行以及呼叫分類
+*/
 func APIServer(port string){
     engine := gin.Default()
 
@@ -31,6 +34,9 @@ func APIServer(port string){
     engine.Run(":" + port)
 }
 
+/*
+CORS請求
+*/
 func allowCrossDomain(c *gin.Context) {
     c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
     c.Writer.Header().Set("Access-Control-Allow-Credentials", "true")
@@ -40,7 +46,16 @@ func allowCrossDomain(c *gin.Context) {
     c.Next()
 }
 
-// http://localhost/v1/SMTP/send?from=sjmtony@gmail.com&to=sjmtony@gmail.com&subj=tes%20t%202%202%202&body=test1&SMTPServer=smtp.gmail.com:465&SMTPMail=sjmtony@gmail.com&SMTPPassword=Sjm778887
+/*
+將POST到的資訊寄送出
+"from":寄信端(Email string)
+"to": 收信端(Email string)
+"subj": 主題(string)
+"body": 內容(string)
+"SMTPServer": SMTP的伺服器
+"SMTPMail": SMTP帳號(Email string)
+"SMTPPassword": SMTP密碼(Email password string)
+*/
 func SMTPSend(c *gin.Context){
 	from := c.Query("from")
 	to := c.Query("to")
