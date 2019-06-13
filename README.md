@@ -55,8 +55,16 @@ go run test.go
 
 可以使用go的語法同時運行多個API，但切記，要注意在使用go的語法時，主程式必須持續運行，不然可能會讓整個程式預期外的時間結束。
 
+首先先引入GIN套件
+
 ```
-Give an example
+go get github.com/gin-gonic/gin
+```
+
+接著運行API Server
+
+```
+go run APIServer.go
 ```
 
 ### And coding style tests
